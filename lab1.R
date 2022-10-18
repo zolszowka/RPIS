@@ -21,13 +21,12 @@ c(dev.mean(precip), dev.median(precip))
 # zad. 6 Jaki jest poziom opadów w miastach, których nazwa zaczyna się na “M” (?startsWith)?
 m = precip[startsWith(names(precip), "M")]
 m
-mean(m)
 
 # zad. 7 W których miastach opady są równe średniej?
 names(precip[precip == mean(precip)])
 
 # zad. 8 W których miastach opady różnią się od mediany nie więcej niż 0.5 cala?
-names(precip[abs(precip - median(precip))<=0.5])
+precip[abs(precip - median(precip))<=0.5]
 
 # zad. 9 W którym mieście opady są najmniejsze, a w którym największe?
 paste("Najmniejsze opady są w: ", names(precip[which.min(precip)]))
@@ -35,6 +34,7 @@ paste("Największe opady są w: ", names(precip[which.max(precip)]))
 
 # zad. 10 Ile jest miast z opadami powyżej średniej?
 sum(precip > mean(precip))
+length(precip[precip > mean(precip)])
 
 # zad. 11 W których miastach opady leżą powyżej górnego kwartyla?
 names(precip[precip>fivenum(precip)[4]])
@@ -47,3 +47,4 @@ hist(precip)
 
 # zad. 14 Narysuj wykres pudełkowy rozkładu. Jakie z niego płyną wnioski? Które miasta stanowią wartości odstające na wykresie pudełkowym (?boxplot, ?boxplot.stats)?
 boxplot(precip)
+boxplot.stats(precip)
