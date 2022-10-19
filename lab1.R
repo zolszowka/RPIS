@@ -1,4 +1,4 @@
-Zadania oparte są na zbiorze danych precip z biblioteki standardowej R (?precip). Znajdź następujące informacje.
+#Zadania oparte są na zbiorze danych precip z biblioteki standardowej R (?precip). Znajdź następujące informacje.
 
 # zad. 1 Jaka jest średnia i mediana opadów w rejestrowanych miastach?
 c(mean(precip), median(precip))
