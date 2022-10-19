@@ -19,7 +19,7 @@ dev.median <- function(x) mean(abs(x - median(x)))
 c(dev.mean(precip), dev.median(precip))
 
 # zad. 6 Jaki jest poziom opadów w miastach, których nazwa zaczyna się na “M” (?startsWith)?
-m = precip[startsWith(names(precip), "M")]
+m <- precip[startsWith(names(precip), "M")]
 m
 
 # zad. 7 W których miastach opady są równe średniej?
