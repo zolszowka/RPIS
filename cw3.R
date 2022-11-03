@@ -46,11 +46,11 @@ complement <- function(e){
 }
   
 
-prob <- function(e, p){
+prob <- function(event, prob_space){
   res <- 0
-  for(i in 1:length(e)){
-    if(e[i] == TRUE){
-      res <- res + p[i]
+  for(i in 1:length(event)){
+    if(event[i] == TRUE){
+      res <- res + prob_space[i]
     }
   }
   return(res)
